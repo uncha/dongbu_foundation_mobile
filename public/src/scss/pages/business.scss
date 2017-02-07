@@ -1,0 +1,352 @@
+.wrapper.business {
+    ._default-title {
+        padding: msize( 54px ) msize( 50px );
+        color: #4d4b4b;
+        line-height: msize( 44px );
+        font-size: msize( 26px );
+        border-top: 1px solid $COLOR01;
+        border-bottom: 1px solid #999999;
+        background-size: cover;
+        background-position: right bottom;
+    }
+
+    ._default-cont {
+        margin-top: msize( 50px );
+
+        h4 {
+            font-size: msize( 34px );
+            // line-height: 32px;
+            color: #000;
+            padding-bottom: msize( 20px );
+            border-bottom: 1px solid $COLOR01;
+        }
+    }
+
+    ._defalt-list {
+        padding-left: msize( 20px );
+        padding-bottom: msize( 10px );
+
+        &:before {
+            content: '- ';
+            position: absolute;
+            margin-left: msize( -20px );
+        }
+    }
+
+    ._default-ico-list {
+        @include clearfix;
+        padding: msize( 38px ) 0;
+
+        .detail {
+            @include clearfix;
+            padding-bottom: msize( 20px );
+            width: 100%;
+
+            .img {
+                float: left;
+
+                > img {
+                    width: msize( 71px );
+                }
+            }
+
+            dl {
+                padding-left: msize( 30px );
+                float: left;
+                width: 80%;
+
+                dt {
+                    font-size: msize( 28px );
+                    line-height: msize( 46px );
+                    color: #373737;
+                }
+
+                dd {
+                    > ul {
+                        > li {
+                            @extend ._defalt-list;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ._default-activity-list {
+        padding: msize( 34px ) 0;
+
+        ul {
+            @include clearfix;
+
+            li {
+                color: #4d4b4b;
+                margin-bottom: msize( 20px );
+
+                .img {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    ._schedule_list {
+        padding: msize( 49px ) 0;
+
+        ul {
+            @include clearfix;
+
+            li {
+                &:first-child {
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                &:nth-child(3) {
+                    margin-left: msize( 60px );
+                }
+
+                &:nth-child(4) {
+                    margin-right: msize( 0 );
+                }
+                // arrow
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: msize( -20px );
+                    top: 50%;
+                    width: msize( 42px );
+                    height: msize( 65px );
+                    margin-top: msize( -65px ) / 2;
+                    background: url("/resources/img/business/ico_next.png") center no-repeat;
+                    background-size: contain;
+                    z-index: 10;
+                }
+                // text
+                position: relative;
+                float: left;
+                width: 40%;
+                height: msize( 142px );
+                background: $COLOR01;
+                border-radius: msize( 20px );
+                margin-right: msize( 40px );
+                margin-bottom: msize( 37px );
+                color: #FFF;
+                // text
+                dl {
+                    // icon
+                    &:before {
+                        float: left;
+                        display: block;
+                        width: 24%;
+                        height: msize( 142px - 66px );
+                        font-size: msize( 54px );
+                        margin: msize( 66px ) 0 0 msize( 36px );
+                    }
+
+                    dt {
+                        font-size: msize( 30px );
+                        line-height: msize( 40px );
+                        padding-top: msize( 40px );
+                    }
+
+                    dd {
+                        font-size: msize( 20px );
+                    }
+                }
+            }
+        }
+    }
+
+    .domestic-wrap {
+        .title-wrap {
+            @extend ._default-title;
+            height: msize( 485px );
+            background-image: url("/resources/img/business/domestic_title_bg.jpg");
+        }
+
+        .apply-support {
+            @extend ._default-cont;
+
+            .apply-support-cont {
+                @extend ._default-ico-list;
+            }
+        }
+
+        .apply-way {
+            @extend ._default-cont;
+
+            .apply-way-list {
+                padding: msize( 38px ) 0;
+
+                ul {
+                    @include clearfix;
+
+                    li {
+                        &:first-child {
+                            &:before {
+                                display: none;
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            margin-right: msize( 0 );
+                        }
+
+                        &:nth-child(4) {
+                            margin-left: msize( 100px );
+                        }
+                        // arrow
+                        &:before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            left: msize( -20px );
+                            top: 50%;
+                            width: msize( 42px );
+                            height: msize( 65px );
+                            margin-top: msize( -65px ) / 2;
+                            background: url("/resources/img/business/ico_next.png") center no-repeat;
+                            background-size: contain;
+                            z-index: 10;
+                        }
+                        position: relative;
+                        float: left;
+                        width: msize( 170px );
+                        height: msize( 170px );
+                        background: $COLOR01;
+                        text-align: center;
+                        border-radius: 100%;
+                        margin-right: msize( 25px );
+                        margin-bottom: msize( 20px );
+                        color: #FFF;
+                        // text
+                        p {
+                            // icon
+                            &:before {
+                                display: block;
+                                font-size: msize( 48px );
+                                padding: msize( 56px ) 0 msize( 14px );
+                            }
+                            font-size: msize( 22px );
+                            line-height: msize( 26px );
+                        }
+                    }
+                }
+            }
+        }
+
+        .evaluation {
+            @extend ._default-cont;
+
+            .detail {
+                padding: msize( 38px ) 0;
+
+                p {
+                    font-size: msize( 26px );
+                    line-height: msize( 40px );
+                    color: #4d4b4b;
+                    padding-bottom: msize( 10px );
+                }
+
+                ul {
+                    > li {
+                        @extend ._defalt-list;
+                    }
+                }
+            }
+        }
+
+        .activity {
+            @extend ._default-cont;
+
+            .activity-list {
+                @extend ._default-activity-list;
+            }
+        }
+
+        .button-group {
+            @include buttonGroup;
+            margin-top: msize( 34px );
+
+            .btn-notice {
+                $value-map: (border:0, bgColor:$COLOR01, color:#FFF, width:msize( 265px ), height:msize( 80px ), fontSize:msize( 24px ) );
+                @include defaultButton($value-map...);
+            }
+        }
+    }
+    // domestic-wrap
+    .oversea-wrap {
+        .title-wrap {
+            @extend ._default-title;
+            height: msize( 485px );
+            background-image: url("/resources/img/business/oversea_title_bg.jpg");
+        }
+
+        .activity {
+            @extend ._default-cont;
+
+            .activity-list {
+                @extend ._default-activity-list;
+            }
+        }
+    }
+    // oversea-wrap
+    .competition-wrap {
+        .title-wrap {
+            @extend ._default-title;
+            height: msize( 535px );
+            background-image: url("/resources/img/business/competition_title_bg.jpg");
+        }
+
+        .summary {
+            @extend ._default-cont;
+
+            .summary-cont {
+                @extend ._default-ico-list;
+            }
+        }
+
+        .schedule {
+            @extend ._default-cont;
+
+            .schedule-list {
+                @extend ._schedule_list;
+
+                ul {
+                    li {
+                        &:nth-child(3) {
+                            dl {
+                                &:before {
+                                    background: url('/resources/img/business/ico_trophy.png') no-repeat;
+                                    background-size: contain;
+                                    content: '';
+                                    height: msize( 44px );
+                                    margin: msize( 50px ) 0 0 msize( 36px );
+                                }
+                            }
+                        }
+                    }
+                    li {
+                        &:nth-child(4) {
+                            dl {
+                                &:before {
+                                    background: url('/resources/img/business/ico_share.png') no-repeat;
+                                    background-size: contain;
+                                    content: '';
+                                    height: msize( 52px );
+                                    margin: msize( 46px ) 0 0 msize( 36px );
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // competition-wrap
+}

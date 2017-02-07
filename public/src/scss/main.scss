@@ -1,0 +1,224 @@
+@import "common.scss";
+
+html, body{
+	height:100%;
+	overflow:hidden;
+	background:#787878;
+}
+
+a{
+	text-decoration:none;
+}
+
+#contents.main{
+	position:relative;
+
+	.visual-section{
+		$VISUAL_HEIGHT:794px;
+
+		position: absolute;
+		width: 100%;
+
+		ul{
+			li{
+				&:first-child{
+					border-top:0;
+					height: msize($VISUAL_HEIGHT);
+
+					.dimd{
+						background:#000;
+						opacity: 0;
+					}
+				}
+
+				height: msize(127px);
+				border-top:msize(3px) solid #FFF;
+				position:relative;
+				overflow:hidden;
+
+				.dimd{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					left:0;
+					top:0;
+					background:#000;
+					opacity: 0.4;
+				}
+
+				.cont-on{
+					display: none;
+					padding-top:sumPercent(84px, $VISUAL_HEIGHT);
+
+					.copy{
+						h2{
+							font-size: sumPercent(46px, $CONTAIN_SIZE, vw);
+							line-height: sumPercent(55px, $CONTAIN_SIZE, vw);
+							color:#000;
+							font-weight:normal;
+							padding-left:sumPercent(40px, $CONTAIN_SIZE);
+							border-top:msize(2px) solid #4d4d4d;
+							display: inline-block;
+						}
+						p{
+							font-size: sumPercent(30px, $CONTAIN_SIZE, vw);
+							line-height: sumPercent(52px, $CONTAIN_SIZE, vw);
+							padding-left:sumPercent(40px, $CONTAIN_SIZE);
+						}
+						.link{
+							position: relative;
+							display: inline-block;
+							padding-left:sumPercent(40px, $CONTAIN_SIZE);
+							width: sumPercent(45px, $CONTAIN_SIZE);
+							margin-top:sumPercent(25px, $VISUAL_HEIGHT);
+
+							img{
+								width:100%;
+							}
+						}
+					}
+
+					.buttons{
+						width: 100%;
+
+						a{
+							position:relative;
+							font-size: sumPercent(26px, $CONTAIN_SIZE, vw);
+							line-height: sumPercent(60px, $CONTAIN_SIZE, vw);
+							margin-top:5px;
+							display: block;
+							color:#FFF;
+							padding-left:sumPercent(40px, $CONTAIN_SIZE);
+							
+							.bg{
+								@include transform(skew(-35deg));
+								
+								background: #00a087;
+								position: absolute;
+								left:0;
+								top:0;
+								margin-left:sumPercent(-80px, $CONTAIN_SIZE);
+								width: 100%;
+								height: 100%;
+							}
+							
+							.text{
+								&:before{
+									position:relative;
+									float:right;
+									padding:sumPercent(15px, $CONTAIN_SIZE) sumPercent(145px, $CONTAIN_SIZE) 0 0;
+								}
+
+								position: relative;
+							}
+						}
+					}
+				}
+
+				.cont-off{
+					h2{
+						font-size: sumPercent(46px, $CONTAIN_SIZE, vw);
+						line-height: msize(129px);
+						font-weight: normal;
+						padding-left:sumPercent(40px, $CONTAIN_SIZE);
+					}
+				}
+			}
+			li.visual01{
+				background: url($IMAGE_ROOT + '/main/visual01.jpg') center top no-repeat;
+				background-size:100% auto;
+				
+				.cont{
+					padding:sumPercent(65px, $CONTAIN_SIZE) sumPercent(73px, $VISUAL_HEIGHT);
+
+					.copy{
+						background:url($IMAGE_ROOT + '/main/rect.gif') left top no-repeat;
+						background-size:sumPercent(230px, $CONTAIN_SIZE) auto;
+						height: 323px;
+						padding-left:sumPercent(42px, $CONTAIN_SIZE);
+						padding-top:sumPercent(93px, $VISUAL_HEIGHT);
+
+						p{
+							font-size: sumPercent(52px, $CONTAIN_SIZE, vw);
+							line-height: sumPercent(62px, $CONTAIN_SIZE, vw);
+							color:#035e5f;
+						}
+					}
+				}
+			}
+			li.visual02{
+				background: url($IMAGE_ROOT + '/main/visual02.jpg') center  95% no-repeat;
+				background-size:100% auto;
+
+				.cont-on{
+					.buttons{
+						margin-top: sumPercent(310px, $VISUAL_HEIGHT);
+
+						a{
+							width:sumPercent(243px, $CONTAIN_SIZE);
+						}
+					}
+				}
+			}
+			li.visual03{
+				background: url($IMAGE_ROOT + '/main/visual03.jpg') center  80% no-repeat;
+				background-size:100% auto;	
+
+				.cont-on{
+					.buttons{
+						margin-top: sumPercent(277px, $VISUAL_HEIGHT);
+						
+						a{
+							width:sumPercent(384px, $CONTAIN_SIZE);
+						}
+					}
+				}
+			}
+			li.visual04{
+				background: url($IMAGE_ROOT + '/main/visual04.jpg') center  60% no-repeat;
+				background-size:100% auto;	
+
+				.cont-on{
+					.buttons{
+						margin-top: sumPercent(310px, $VISUAL_HEIGHT);
+						
+						a{
+							width:sumPercent(314px, $CONTAIN_SIZE);
+						}
+					}
+				}
+			}
+			li.visual05{
+				background: url($IMAGE_ROOT + '/main/visual05.jpg') center  52% no-repeat;
+				background-size:100% auto;
+			}
+			li.visual06{
+				background: url($IMAGE_ROOT + '/main/visual06.jpg') center  85% no-repeat;
+				background-size:100% auto;
+
+				.cont-on{
+					.ceo-message{
+						padding-left:sumPercent(40px, $CONTAIN_SIZE);
+						margin-top: sumPercent(85px, $VISUAL_HEIGHT);
+
+						.message{
+							font-size: sumPercent(26px, $CONTAIN_SIZE, vw);
+							line-height: sumPercent(36px, $CONTAIN_SIZE, vw);
+						}
+						.ceo{
+							&:before{
+								content:'';
+								display: inline-block;
+								width:sumPercent(35px, $CONTAIN_SIZE);
+							}
+
+							margin-top: sumPercent(40px, $VISUAL_HEIGHT);
+							font-size: sumPercent(20px, $CONTAIN_SIZE, vw);
+							line-height: sumPercent(30px, $CONTAIN_SIZE, vw);
+						}
+					}
+				}
+			}
+		}
+	}
+}

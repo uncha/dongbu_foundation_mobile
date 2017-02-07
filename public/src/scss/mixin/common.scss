@@ -1,0 +1,72 @@
+/*
+* float 해제
+*/
+@mixin clearfix {
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+
+	* html & {
+		height: 1px;
+	}
+}
+/*
+* 모바일 사이즈 변환
+*/
+@function msize($size) {
+	 @return $size / 2;
+}
+@function sumPercent($targetSize:0, $standardSize:0, $unit:%) {
+	 @return ($targetSize / $standardSize * 100) + $unit;
+}
+@mixin transform($value) {
+	-webkit-transform: $value;
+	-moz-transform: $value;
+	-ms-transform: $value;
+	-o-transform: $value;
+	transform: $value;
+}
+// transition
+@mixin transition($target:transform, $time:1s, $timing:cubic-bezier(.25,0,0,1), $delay:0s) {
+	-webkit-transition: $target $time $timing $delay;
+	transition: $target $time $timing $delay;
+}
+/**
+* 기본 버튼
+*
+* @param {border value} $border border크기와 색지정
+* @param {color value} $bgColor background 색지정
+* @param {color value} $color 글자색지정
+* @param {size value} $width 가로크기
+* @param {size value} $height 세로크기
+*/
+@mixin defaultButton($border:1px solid #c7c7c7, $bgColor:#FFF, $color:#666, $width:150px, $height:40px, $fontSize:14px) {
+	display: block;
+	box-sizing: border-box;
+	margin: 0 auto;
+	width: $width;
+	font-size: $fontSize;
+	line-height: $height;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	border: $border;
+	background-color: $bgColor;
+	color: $color;
+	cursor: pointer;
+}
+/*
+* button group (default button들을 한줄로 묶어 주는 역할)
+*/
+@mixin buttonGroup {
+	 @include clearfix;
+	text-align: center;
+
+	> * {
+		display: inline-block !important;
+	}
+}
